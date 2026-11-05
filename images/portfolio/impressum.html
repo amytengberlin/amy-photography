@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum — Amy Teng Photography</title>
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://amyteng.com/impressum.html" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .legal-hero { padding-block: 9rem 3.5rem; background: var(--sand); text-align: center; }
+    .legal-hero h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+    .legal-hero .sub { color: var(--ink-soft); margin-top: .75rem; }
+    .legal-body { padding-block: 4rem 6rem; }
+    .legal-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: clamp(1.75rem, 5vw, 3.5rem); max-width: 48rem; margin-inline: auto; }
+    .legal-card h2 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); margin: 2.25rem 0 .6rem; }
+    .legal-card h2:first-child { margin-top: 0; }
+    .legal-card p { margin-bottom: 1rem; color: var(--ink-soft); }
+    .legal-card p.en { font-size: .92rem; font-style: italic; }
+    .legal-card a { color: var(--terracotta-text); text-underline-offset: .2em; }
+    .legal-card a:hover { color: var(--terracotta-dark); }
+    .back-link { color: var(--ink); text-decoration: none; font-size: .95rem; letter-spacing: .04em; }
+    .back-link:hover { color: var(--terracotta-text); }
+    .todo { background: #ffe066; color: #000; font-weight: 600; padding: 0 .25em; }
+  </style>
+</head>
+<body>
+  <header class="site-header scrolled">
+    <nav class="nav container">
+      <a href="index.html" class="logo">Amy Teng Photography</a>
+      <a href="index.html" class="back-link">&larr; Back to site</a>
+    </nav>
+  </header>
+
+  <section class="legal-hero">
+    <div class="container">
+      <p class="eyebrow">Legal</p>
+      <h1>Impressum</h1>
+      <p class="sub">Legal notice pursuant to § 5 DDG</p>
+    </div>
+  </section>
+
+  <main class="legal-body">
+    <div class="container">
+      <div class="legal-card">
+        <h2>Provider</h2>
+        <p>Amy Teng<br />Amy Teng Photography<br />Bredowstrasse 33<br />10551 Berlin<br />Germany</p>
+
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:hello@amyteng.com">hello@amyteng.com</a></p>
+
+        <h2>Responsible for content (§ 18 Abs. 2 MStV)</h2>
+        <p>Amy Teng, Bredowstrasse 33, 10551 Berlin, Germany</p>
+
+        <h2>Liability for links</h2>
+        <p>This site links to external websites (for example Instagram). I have no control over their content and accept no responsibility for it. The respective provider is responsible for the content of linked pages.</p>
+
+        <h2>Copyright</h2>
+        <p>All photographs and texts on this site are protected by copyright and belong to Amy Teng unless stated otherwise. Use, reproduction or distribution requires prior written permission.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Amy Teng Photography. All rights reserved.</p>
+      <p><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="index.html">Home</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

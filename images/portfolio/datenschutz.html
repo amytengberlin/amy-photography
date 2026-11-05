@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung — Amy Teng Photography</title>
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://amyteng.com/datenschutz.html" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .legal-hero { padding-block: 9rem 3.5rem; background: var(--sand); text-align: center; }
+    .legal-hero h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+    .legal-hero .sub { color: var(--ink-soft); margin-top: .75rem; }
+    .legal-body { padding-block: 4rem 6rem; }
+    .legal-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: clamp(1.75rem, 5vw, 3.5rem); max-width: 48rem; margin-inline: auto; }
+    .legal-card h2 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); margin: 2.25rem 0 .6rem; }
+    .legal-card h2:first-child { margin-top: 0; }
+    .legal-card p { margin-bottom: 1rem; color: var(--ink-soft); }
+    .legal-card p.en { font-size: .92rem; font-style: italic; }
+    .legal-card a { color: var(--terracotta-text); text-underline-offset: .2em; }
+    .legal-card a:hover { color: var(--terracotta-dark); }
+    .back-link { color: var(--ink); text-decoration: none; font-size: .95rem; letter-spacing: .04em; }
+    .back-link:hover { color: var(--terracotta-text); }
+    .todo { background: #ffe066; color: #000; font-weight: 600; padding: 0 .25em; }
+  </style>
+</head>
+<body>
+  <header class="site-header scrolled">
+    <nav class="nav container">
+      <a href="index.html" class="logo">Amy Teng Photography</a>
+      <a href="index.html" class="back-link">&larr; Back to site</a>
+    </nav>
+  </header>
+
+  <section class="legal-hero">
+    <div class="container">
+      <p class="eyebrow">Legal</p>
+      <h1>Datenschutzerklärung</h1>
+      <p class="sub">Privacy policy (German is the binding version)</p>
+    </div>
+  </section>
+
+  <main class="legal-body">
+    <div class="container">
+      <div class="legal-card">
+        <h2>1. Verantwortliche</h2>
+        <p>Amy Teng, Amy Teng Photography, Bredowstrasse 33, 10551 Berlin, Germany<br />E-Mail: <a href="mailto:hello@amyteng.com">hello@amyteng.com</a></p>
+
+        <h2>2. Hosting über GitHub Pages</h2>
+        <p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA. Beim Aufruf der Seite verarbeitet GitHub technisch notwendige Daten, insbesondere Ihre IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite und Browserinformationen (Server-Logfiles). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und effizienten Bereitstellung der Website). Eine Übermittlung in die USA kann stattfinden; GitHub ist unter dem EU-US Data Privacy Framework zertifiziert <span class="todo">[bitte aktuellen Status prüfen]</span>.</p>
+        <p class="en">In short: the site is hosted by GitHub (USA), which processes your IP address and basic request data when you visit.</p>
+
+        <h2>3. Schriftarten</h2>
+        <p>Die verwendeten Schriftarten (Cormorant Garamond, Jost) werden lokal von dieser Website ausgeliefert. Es werden keine Daten an Google oder andere Schriftanbieter übertragen.</p>
+
+        <h2>4. Keine Cookies, kein Tracking</h2>
+        <p>Diese Website setzt keine Cookies und verwendet keine Analyse- oder Marketing-Tools.</p>
+
+        <h2>5. Kontaktaufnahme per E-Mail</h2>
+        <p>Wenn Sie mir per E-Mail schreiben, verarbeite ich Ihre Angaben (Name, E-Mail-Adresse, Inhalt der Nachricht) zur Bearbeitung Ihrer Anfrage und für eventuelle Anschlussfragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. lit. f. Die Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+
+        <h2>6. Externe Links (Instagram)</h2>
+        <p>Diese Website enthält einen Link zu Instagram (@captivate.amy). Es werden keine Instagram-Inhalte eingebunden; Daten werden erst übertragen, wenn Sie den Link anklicken. Dann gilt die Datenschutzerklärung von Instagram (Meta Platforms Ireland Ltd.).</p>
+
+        <h2>7. Ihre Rechte</h2>
+        <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Wenden Sie sich dazu an die oben genannte E-Mail-Adresse. Sie können sich außerdem bei einer Datenschutzaufsichtsbehörde beschweren, in Berlin: Berliner Beauftragte für Datenschutz und Informationsfreiheit, Alt-Moabit 59–61, 10555 Berlin.</p>
+
+        <h2>8. Änderungen</h2>
+        <p>Wird die Website erweitert (zum Beispiel um ein Kontaktformular), wird diese Erklärung angepasst. Stand: 02.11.2026.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Amy Teng Photography. All rights reserved.</p>
+      <p><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="index.html">Home</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
