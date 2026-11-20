@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="impressum">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,45 +30,49 @@
   <header class="site-header scrolled">
     <nav class="nav container">
       <a href="index.html" class="logo">Amy Teng Photography</a>
-      <a href="index.html" class="back-link">&larr; Back to site</a>
+      <div class="nav-right">
+        <a href="index.html" class="back-link" data-i18n="legal.back">&larr; Back to site</a>
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria-label="aria.lang"><button type="button" data-lang="en" aria-pressed="true">EN</button><span aria-hidden="true">|</span><button type="button" data-lang="de" aria-pressed="false">DE</button></div>
+      </div>
     </nav>
   </header>
 
   <section class="legal-hero">
     <div class="container">
-      <p class="eyebrow">Legal</p>
-      <h1>Impressum</h1>
-      <p class="sub">Legal notice pursuant to § 5 DDG</p>
+      <p class="eyebrow" data-i18n="legal.eyebrow">Legal</p>
+      <h1 data-i18n="imp.h1">Impressum</h1>
+      <p class="sub" data-i18n="imp.sub">Legal notice pursuant to § 5 DDG</p>
     </div>
   </section>
 
   <main class="legal-body">
     <div class="container">
       <div class="legal-card">
-        <h2>Provider</h2>
-        <p>Amy Teng<br />Amy Teng Photography<br />Bredowstrasse 33<br />10551 Berlin<br />Germany</p>
+        <h2 data-i18n="imp.1">Provider</h2>
+        <p data-i18n="imp.2">Amy Teng<br />Amy Teng Photography<br />Bredowstrasse 33<br />10551 Berlin<br />Germany</p>
 
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:hello@amyteng.com">hello@amyteng.com</a></p>
+        <h2 data-i18n="imp.3">Contact</h2>
+        <p data-i18n="imp.4">Email: <a href="mailto:hello@amyteng.com">hello@amyteng.com</a></p>
 
-        <h2>Responsible for content (§ 18 Abs. 2 MStV)</h2>
-        <p>Amy Teng, Bredowstrasse 33, 10551 Berlin, Germany</p>
+        <h2 data-i18n="imp.5">Responsible for content (§ 18 Abs. 2 MStV)</h2>
+        <p data-i18n="imp.6">Amy Teng, Bredowstrasse 33, 10551 Berlin, Germany</p>
 
-        <h2>Liability for links</h2>
-        <p>This site links to external websites (for example Instagram). I have no control over their content and accept no responsibility for it. The respective provider is responsible for the content of linked pages.</p>
+        <h2 data-i18n="imp.7">Liability for links</h2>
+        <p data-i18n="imp.8">This site links to external websites (for example Instagram). I have no control over their content and accept no responsibility for it. The respective provider is responsible for the content of linked pages.</p>
 
-        <h2>Copyright</h2>
-        <p>All photographs and texts on this site are protected by copyright and belong to Amy Teng unless stated otherwise. Use, reproduction or distribution requires prior written permission.</p>
+        <h2 data-i18n="imp.9">Copyright</h2>
+        <p data-i18n="imp.10">All photographs and texts on this site are protected by copyright and belong to Amy Teng unless stated otherwise. Use, reproduction or distribution requires prior written permission.</p>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Amy Teng Photography. All rights reserved.</p>
-      <p><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="index.html">Home</a></p>
+      <p data-i18n="footer.copy">&copy; <span id="year"></span> Amy Teng Photography. All rights reserved.</p>
+      <p><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="index.html" data-i18n="footer.home">Home</a></p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/i18n.js"></script>
 </body>
 </html>

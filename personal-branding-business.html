@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="business">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,20 +19,22 @@
   <header class="site-header">
     <nav class="nav container">
       <a href="index.html#home" class="logo">Amy Teng Photography</a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Open menu" data-i18n-aria-label="aria.menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
         <li class="has-dropdown">
-          <a href="index.html#portfolio" aria-haspopup="true">Portfolio</a>
+          <a href="index.html#portfolio" aria-haspopup="true" data-i18n="nav.portfolio">Portfolio</a>
           <ul class="dropdown">
-            <li><a href="people-portraits.html">People &amp; Portraits</a></li>
-            <li><a href="personal-branding-business.html">Personal Branding &amp; Business</a></li>
-            <li><a href="events-celebrations.html">Events &amp; Celebrations</a></li>
+            <li><a href="people-portraits.html" data-i18n="cat.people">People &amp; Portraits</a></li>
+            <li><a href="personal-branding-business.html" data-i18n="cat.business">Personal Branding &amp; Business</a></li>
+            <li><a href="events-celebrations.html" data-i18n="cat.events">Events &amp; Celebrations</a></li>
           </ul>
         </li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#book">Contact</a></li>
+        <li><a href="offer.html" data-i18n="nav.offer">Offer</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#book" data-i18n="nav.contact">Contact</a></li>
+        <li class="lang-switch" role="group" aria-label="Language" data-i18n-aria-label="aria.lang"><button type="button" data-lang="en" aria-pressed="true">EN</button><span aria-hidden="true">|</span><button type="button" data-lang="de" aria-pressed="false">DE</button></li>
       </ul>
     </nav>
   </header>
@@ -40,8 +42,8 @@
   <main>
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow">Portfolio</p>
-      <h1>Personal Branding &amp; Business</h1>
+      <p class="eyebrow" data-i18n="nav.portfolio">Portfolio</p>
+      <h1 data-i18n="cat.business">Personal Branding &amp; Business</h1>
     </div>
   </section>
 
@@ -67,16 +69,17 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Amy Teng Photography. All rights reserved.</p>
-      <p><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="index.html#portfolio">Back to portfolio</a></p>
+      <p data-i18n="footer.copy">&copy; <span id="year"></span> Amy Teng Photography. All rights reserved.</p>
+      <p><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="index.html#portfolio" data-i18n="footer.back">Back to portfolio</a></p>
     </div>
   </footer>
 
-  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
-    <button class="lightbox-close" aria-label="Close">&times;</button>
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" data-i18n-aria-label="aria.viewer" hidden>
+    <button class="lightbox-close" aria-label="Close" data-i18n-aria-label="aria.close">&times;</button>
     <img src="" alt="" />
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
 </body>
 </html>

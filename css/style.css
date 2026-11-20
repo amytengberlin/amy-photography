@@ -618,13 +618,16 @@ fieldset.field { border: none; padding: 0; }
 }
 
 /* ---------- Home: category tiles ---------- */
+/* wider than the normal container so the squares can be big */
+.container-wide { width: min(1520px, 97%); }
+
+#portfolio .eyebrow { text-align: center; }
+
 .category-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: clamp(0.75rem, 1.6vw, 1.75rem);
   margin-top: 2.5rem;
-  border-radius: var(--radius);
-  overflow: hidden;
 }
 
 .category-tile {
@@ -632,7 +635,8 @@ fieldset.field { border: none; padding: 0; }
   display: block;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: var(--ink);
+  border-radius: var(--radius);
+  background: var(--white);   /* light backdrop: fading the photo on hover makes it lighter */
   color: var(--white);
   text-decoration: none;
 }
@@ -711,4 +715,88 @@ fieldset.field { border: none; padding: 0; }
 
   /* tiles stack on phones so the names stay readable */
   .category-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Language switch (EN | DE) ---------- */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.lang-switch button {
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--ink-soft);
+  padding: 0.15rem 0.1rem;
+}
+
+.lang-switch button:hover { color: var(--terracotta-text); }
+
+.lang-switch button[aria-pressed="true"] {
+  color: var(--ink);
+  font-weight: 500;
+  border-bottom-color: var(--terracotta);
+}
+
+.lang-switch button:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 2px; }
+
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+
+@media (max-width: 640px) {
+  .lang-switch { justify-content: center; padding-top: 0.5rem; font-size: 0.95rem; }
+}
+
+/* The logo and menu no longer fit on one line below ~1000px: use the phone-style menu there */
+@media (max-width: 1000px) {
+  .nav { padding-block: 1rem; }
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 1.4rem;
+    background: var(--cream);
+    padding: 1.5rem 0 2rem;
+    border-bottom: 1px solid rgba(61, 54, 48, 0.08);
+    display: none;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .has-dropdown { text-align: center; }
+  .has-dropdown > a::after { display: none; }
+
+  .dropdown {
+    position: static;
+    min-width: 0;
+    padding: 0.25rem 0 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    text-align: center;
+  }
+  .dropdown::before { display: none; }
+  .dropdown a:not(.btn) { padding: 0.4rem 0; font-size: 0.88rem; color: var(--ink-soft); }
+
+  .lang-switch { justify-content: center; font-size: 0.95rem; }
+}
+
+/* legal pages: the logo already links home, so on phones keep just the language switch */
+@media (max-width: 640px) {
+  .nav-right .back-link { display: none; }
+  .nav-right .lang-switch { padding-top: 0; }
 }
