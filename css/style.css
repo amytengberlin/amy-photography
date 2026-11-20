@@ -567,3 +567,148 @@ fieldset.field { border: none; padding: 0; }
   .hero-slide, .gallery-item img { transition: none; }
   .gallery-item:hover img { transform: none; }
 }
+
+/* ---------- Portfolio dropdown ---------- */
+.has-dropdown { position: relative; }
+
+.has-dropdown > a::after {
+  content: "\25BE";
+  margin-left: 0.35em;
+  font-size: 0.8em;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: -1.25rem;
+  min-width: 18rem;
+  list-style: none;
+  padding: 0.6rem 0;
+  background: rgba(250, 246, 240, 0.97);
+  border: 1px solid rgba(61, 54, 48, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+
+/* invisible bridge so the menu doesn't close while the pointer crosses the gap */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -0.75rem;
+  left: 0;
+  right: 0;
+  height: 0.75rem;
+}
+
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.dropdown a:not(.btn) {
+  display: block;
+  padding: 0.6rem 1.4rem;
+  white-space: nowrap;
+}
+
+/* ---------- Home: category tiles ---------- */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 2.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.category-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.category-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease, transform 0.6s ease;
+}
+
+.category-tile:hover img,
+.category-tile:focus-visible img {
+  opacity: 0.55;
+  transform: scale(1.03);
+}
+
+.category-label {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 3rem 1.5rem 1.6rem;
+  background: linear-gradient(to top, rgba(30, 26, 22, 0.7), transparent);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.category-tile:focus-visible { outline: 3px solid var(--terracotta); outline-offset: -3px; }
+
+/* ---------- Category pages ---------- */
+.page-hero {
+  padding-block: 9rem 3.5rem;
+  background: var(--sand);
+  text-align: center;
+}
+
+.page-hero h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+
+.page-hero + .section { padding-top: 3.5rem; }
+
+.coming-soon {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  text-align: center;
+  margin-block: 2rem 0.5rem;
+}
+
+.coming-soon-sub { text-align: center; color: var(--ink-soft); }
+
+.coming-soon-actions { text-align: center; margin: 2rem 0 3rem; }
+
+@media (max-width: 900px) {
+  .dropdown { min-width: 16rem; }
+}
+
+@media (max-width: 640px) {
+  /* menu is a stacked list on phones: show the sub-items inline */
+  .dropdown {
+    position: static;
+    min-width: 0;
+    padding: 0.25rem 0 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    text-align: center;
+  }
+  .dropdown::before { display: none; }
+  .dropdown a:not(.btn) { padding: 0.4rem 0; font-size: 0.88rem; color: var(--ink-soft); }
+  .has-dropdown > a::after { display: none; }
+  .has-dropdown { text-align: center; }
+
+  /* tiles stack on phones so the names stay readable */
+  .category-grid { grid-template-columns: 1fr; }
+}
