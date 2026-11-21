@@ -619,7 +619,8 @@ fieldset.field { border: none; padding: 0; }
 
 /* ---------- Home: category tiles ---------- */
 /* wider than the normal container so the squares can be big */
-.container-wide { width: min(1520px, 97%); }
+.container-wide { width: min(1292px, 82.5%); }   /* squares: 15% smaller, clear of the screen edges */
+.container-carousel { width: min(1400px, 94%); }
 
 #portfolio .eyebrow { text-align: center; }
 
@@ -799,4 +800,154 @@ fieldset.field { border: none; padding: 0; }
 @media (max-width: 640px) {
   .nav-right .back-link { display: none; }
   .nav-right .lang-switch { padding-top: 0; }
+}
+
+/* ---------- Testimonials ---------- */
+.testimonials { text-align: center; }
+
+.testimonial-slider { max-width: 54rem; margin: 2.5rem auto 0; }
+
+.testimonial-stage { position: relative; padding-inline: 3.75rem; }
+
+.testimonial-viewport { display: grid; }
+
+.testimonial {
+  grid-area: 1 / 1;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s ease, visibility 0.7s;
+}
+
+.testimonial.is-active { opacity: 1; visibility: visible; }
+
+/* before the script runs: just show the first one */
+.testimonial-slider:not(.is-ready) .testimonial:first-child { opacity: 1; visibility: visible; }
+.testimonial-slider:not(.is-ready) .testimonial:not(:first-child) { display: none; }
+
+.testimonial-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.45rem, 3vw, 2.05rem);
+  line-height: 1.35;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial figcaption {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.slider-arrow,
+.carousel-arrow {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(61, 54, 48, 0.18);
+  background: rgba(250, 246, 240, 0.92);
+  color: var(--ink);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.slider-arrow:hover,
+.carousel-arrow:hover { background: var(--ink); color: var(--cream); }
+
+.slider-arrow:focus-visible,
+.carousel-arrow:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 2px; }
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider-prev { left: 0; }
+.slider-next { right: 0; }
+
+.testimonial-slider.has-multiple .slider-arrow { display: flex; }
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+}
+
+.slider-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(61, 54, 48, 0.25);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.slider-dots button.is-active { background: var(--terracotta); transform: scale(1.25); }
+.slider-dots button:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+
+/* ---------- Photo carousel (category pages) ---------- */
+.carousel { position: relative; }
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--terracotta) transparent;
+}
+
+.carousel-track:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 4px; }
+
+.carousel-track .gallery-item {
+  flex: 0 0 auto;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.carousel-track .gallery-item img {
+  width: auto;
+  max-width: none;
+  height: clamp(300px, 64vh, 640px);
+}
+
+.carousel-arrow {
+  display: flex;
+  position: absolute;
+  top: calc(50% - 0.6rem);
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  box-shadow: var(--shadow);
+}
+.carousel-prev { left: 1rem; }
+.carousel-next { right: 1rem; }
+.carousel-arrow:disabled { opacity: 0; pointer-events: none; }
+
+@media (max-width: 640px) {
+  .container-wide { width: 88%; }
+  .testimonial-stage { padding-inline: 2.5rem; }
+  .slider-arrow { width: 34px; height: 34px; font-size: 1.3rem; }
+  .carousel-arrow { width: 40px; height: 40px; font-size: 1.3rem; }
+  .carousel-prev { left: 0.5rem; }
+  .carousel-next { right: 0.5rem; }
+  .carousel-track .gallery-item img { height: clamp(260px, 58vh, 480px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial { transition: none; }
+  .carousel-track { scroll-behavior: auto; }
 }

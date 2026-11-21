@@ -22,6 +22,9 @@
     "aria.next": "Nächstes Foto",
     "aria.viewer": "Fotoansicht",
     "aria.close": "Schließen",
+    "aria.carousel": "Fotokarussell",
+    "aria.prevT": "Vorherige Stimme",
+    "aria.nextT": "Nächste Stimme",
 
     // --- home ---
     "hero.eyebrow": "Portrait- &amp; Eventfotografie in Berlin",
@@ -29,6 +32,9 @@
     "hero.sub": "Warme, natürliche Fotografie, die Familien, Paare, besondere Momente und unvergessliche Events festhält &ndash; in Berlin und darüber hinaus.",
     "hero.btn": "Portfolio ansehen",
     "quote.text": "&bdquo;Fotografie ist eine Art zu fühlen, zu berühren, zu lieben. Was du auf Film festgehalten hast, ist für immer bewahrt&hellip; es erinnert sich an die kleinen Dinge, lange nachdem du alles andere vergessen hast.&ldquo;",
+    "testi.eyebrow": "Kundenstimmen",
+    "testi.h2": "Liebe Worte",
+    "testi.1": "&bdquo;Wir sind absolut begeistert von den Fotos! Du bist unglaublich talentiert, wunderbar, und es ist eine Freude, mit dir zu arbeiten. Vielen Dank, dass du diese wunderschönen Momente festgehalten hast. Wir könnten nicht glücklicher sein!&ldquo;",
     "about.h2": "Hallo, ich bin Amy.",
     "about.p1": "Ich komme aus Vancouver in Kanada und nenne inzwischen Berlin mein Zuhause. Meine Liebe zur Fotografie begann in einer Schuldunkelkammer, wo ich Filme entwickelte und Schwarz-Weiß-Fotos von Hand abzog &ndash; zuzusehen, wie ein Bild langsam entsteht, fühlte sich wie Magie an, und ich wusste damals schon, dass die Fotografie immer ein Teil von mir sein würde.",
     "about.p2": "Aus dieser Neugier wurde mein Beruf: Acht Jahre im Fotostudio haben mir beigebracht, mit Menschen in Kontakt zu kommen, ihnen die Nervosität zu nehmen und in nur wenigen Momenten echte Ausdrücke einzufangen. Heute fotografiere ich Einzelpersonen, Paare und Familien &ndash; und bewahre die leisen Momente, das echte Lachen und die kleinen Verbindungen, die mit der Zeit immer bedeutsamer werden.",

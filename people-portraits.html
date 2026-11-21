@@ -48,11 +48,13 @@
   </section>
 
   <section class="section">
-    <div class="container">
+    <div class="container container-carousel">
       <!-- HOW TO ADD A PHOTO: 1) upload the resized JPG to images/portfolio/
-           2) copy one of the <figure> lines below, paste it on a new line, and change the
+           2) copy one of the <figure> lines below, paste it on a new line (inside the carousel), and change the
               filename (src), the description (alt) and width/height (1066x1600 = tall photo, 1600x1066 = wide photo). -->
-      <div class="gallery">
+      <div class="carousel" data-carousel>
+        <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous photo" data-i18n-aria-label="aria.prev">&#8249;</button>
+        <div class="carousel-track" tabindex="0" role="region" aria-label="Photo carousel" data-i18n-aria-label="aria.carousel">
         <figure class="gallery-item"><img src="images/portfolio/dsc00218.jpg" alt="Portrait in a graffiti-lined city alley" width="1066" height="1600" loading="lazy" /></figure>
         <figure class="gallery-item"><img src="images/portfolio/dsc00734.jpg" alt="Maternity portrait, hands forming a heart" width="1600" height="1066" loading="lazy" /></figure>
         <figure class="gallery-item"><img src="images/portfolio/dsc03061.jpg" alt="Relaxed cafe portrait with a warm smile" width="1066" height="1600" loading="lazy" /></figure>
@@ -95,6 +97,8 @@
         <figure class="gallery-item"><img src="images/portfolio/dsc08432.jpg" alt="Portrait under a sweeping glass roof" width="1600" height="1066" loading="lazy" /></figure>
         <figure class="gallery-item"><img src="images/portfolio/dsc08491.jpg" alt="Portrait above the Tokyo skyline" width="1600" height="1066" loading="lazy" /></figure>
         <figure class="gallery-item"><img src="images/portfolio/dsc08677.jpg" alt="Portrait among glowing pink lights" width="1066" height="1600" loading="lazy" /></figure>
+        </div>
+        <button type="button" class="carousel-arrow carousel-next" aria-label="Next photo" data-i18n-aria-label="aria.next">&#8250;</button>
       </div>
     </div>
   </section>
@@ -114,6 +118,7 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/sliders.js"></script>
   <script src="js/i18n.js"></script>
 </body>
 </html>
