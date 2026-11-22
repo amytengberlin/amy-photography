@@ -47,8 +47,21 @@ if (slides.length > 1) {
     slides[current].classList.add("is-active");
     slides[current].removeAttribute("aria-hidden");
   };
-  document.querySelector(".hero-prev").addEventListener("click", () => show(current - 1));
-  document.querySelector(".hero-next").addEventListener("click", () => show(current + 1));
+  document.querySelector(".hero-prev").addEventListener("click", () => { show(current - 1); start(); });
+  document.querySelector(".hero-next").addEventListener("click", () => { show(current + 1); start(); });
+
+  // Auto-rotate (every HERO_MS); the arrows restart the timer. Paused while the tab is hidden
+  // and off for visitors who prefer reduced motion.
+  const HERO_MS = 6000;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let timer = null;
+  const stop = () => { clearInterval(timer); timer = null; };
+  const start = () => {
+    stop();
+    if (!reduceMotion && !document.hidden) timer = setInterval(() => show(current + 1), HERO_MS);
+  };
+  document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
+  start();
 }
 
 // Lightbox for gallery (keyboard-accessible)
