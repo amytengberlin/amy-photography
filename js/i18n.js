@@ -51,6 +51,7 @@
     "soon.events": "Fotos von Events und Feiern folgen bald.",
     "soon.offer": "Details zu meinem Angebot folgen bald.",
     "soon.backmain": "Zurück zur Startseite",
+    "home.btn": "Zurück zur Startseite",
     "offer.eyebrow": "Mein Angebot",
 
     // --- page titles / descriptions ---

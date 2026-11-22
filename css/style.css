@@ -466,8 +466,7 @@ fieldset.field { border: none; padding: 0; }
 
 .contact-list a {
   color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+  text-decoration: none;
 }
 
 .contact-list a:hover { color: var(--terracotta-dark); }
@@ -950,4 +949,58 @@ fieldset.field { border: none; padding: 0; }
 @media (prefers-reduced-motion: reduce) {
   .testimonial { transition: none; }
   .carousel-track { scroll-behavior: auto; }
+}
+
+/* ---------- Contact: space above the email button ---------- */
+.contact-form .btn { margin-top: 1.5rem; }
+
+/* ---------- Category pages: return-to-home button under the carousel ---------- */
+.carousel-home { text-align: center; margin-top: 2.5rem; }
+
+/* ---------- Home tiles, web version: name sits below the photo, bottom-left ---------- */
+@media (min-width: 641px) {
+  .category-tile {
+    aspect-ratio: auto;
+    overflow: visible;
+    background: none;
+    color: var(--ink);
+  }
+
+  .category-tile img {
+    display: block;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius);
+  }
+
+  /* fading the photo over the cream page makes it lighter on hover */
+  .category-tile:hover img,
+  .category-tile:focus-visible img { opacity: 0.55; transform: none; }
+
+  .category-label {
+    position: static;
+    padding: 1rem 0 0;
+    background: none;
+    text-align: left;
+    font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+    color: var(--ink);
+    transition: color 0.25s;
+  }
+
+  .category-tile:hover .category-label,
+  .category-tile:focus-visible .category-label { color: var(--terracotta-text); }
+
+  .category-tile:focus-visible { outline-offset: 6px; }
+}
+
+/* ---------- Hero on phones: lighter wash so the text reads, and a few photos nudged left ---------- */
+@media (max-width: 640px) {
+  .hero-media::after {
+    background:
+      linear-gradient(rgba(250, 246, 240, 0.45), transparent 20%),
+      linear-gradient(rgba(250, 246, 240, 0.66), rgba(250, 246, 240, 0.66));
+  }
+
+  .hero-slide.pos-left { object-position: 58% center; }
+  .hero-slide.pos-left-more { object-position: 70% center; }
 }
