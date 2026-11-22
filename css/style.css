@@ -966,16 +966,15 @@ fieldset.field { border: none; padding: 0; }
     color: var(--ink);
   }
 
-  .category-tile img {
-    display: block;
-    height: auto;
+  .category-tile .category-photo {
+    position: relative;
+    inset: auto;
     aspect-ratio: 1 / 1;
-    border-radius: var(--radius);
   }
 
   /* fading the photo over the cream page makes it lighter on hover */
   .category-tile:hover img,
-  .category-tile:focus-visible img { opacity: 0.55; transform: none; }
+  .category-tile:focus-visible img { opacity: 0.55; transform: scale(1.05); }   /* lighter + gentle zoom, like the gallery photos */
 
   .category-label {
     position: static;
@@ -1003,4 +1002,13 @@ fieldset.field { border: none; padding: 0; }
 
   .hero-slide.pos-left { object-position: 58% center; }
   .hero-slide.pos-left-more { object-position: 70% center; }
+}
+
+/* the photo sits in its own clipped frame so the hover zoom stays inside the rounded corners */
+.category-photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius);
 }
